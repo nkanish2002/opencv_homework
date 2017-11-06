@@ -23,7 +23,7 @@ if __name__ == "__main__":
 	for values, channel in zip((ch1,ch2,ch3), (2,1,0)):
 		img = np.zeros((values.shape[0], values.shape[1], 3), dtype = values.dtype) 
 		img[:,:,channel] = values
-		print(int(img(20,25,1)))
+		print(int(img[20,25,1]))
 		cv2.imshow('Image',img)
 		cv2.waitKey(0)
 		cv2.destroyAllWindows()
